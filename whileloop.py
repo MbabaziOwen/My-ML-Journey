@@ -1,6 +1,8 @@
-name = input("enter you name ")
+food = input("Enter a food you like (press q to quit): ")
 
-while name =="":
-    print("you did not enter your name ")
-    name = input("Enter your name: ")
-print(f"Hello {name}")
+while not food  == "q":
+    print(f"you like {food}")
+    food = input("enter another food: ")
+
+print("you have quit ")
+ 
