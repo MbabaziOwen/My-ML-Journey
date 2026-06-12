@@ -1,11 +1,11 @@
-# doing something a fixed number of times 
+import time
 
-for x in range (1,11):
-    print(x)
 
-for x in reversed(range(1,11,2)):#if you want to reverse it 
-    print(x)
+my_time = int(input("enter time in seconds "))
 
-credit_card = "1234-5678-9102-1234"
-for x in credit_card:
+for x in range(1,my_time):
     print(x)
+    time.sleep(1)
+
+
+print("Time's up ")
