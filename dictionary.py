@@ -7,4 +7,15 @@ capitals = {"USA": "Washington DC",
 #print(dir(capitals))
 #print(help(capitals))  to get help and get all the functions you can use with the dictionary 
 
-print(capitals.get("Uganda"))
+#capitals.get("India")  to get the iteam connected to the key 
+  
+#if capitals.get("Uganda"):
+#    print("That capital exists ")
+
+#else:
+#    print("that capital doesn't exist ")    
+#capitals.update({"germerny ": "Berlin"})
+#print(capitals)
+
+keys =  capitals.keys()
+print(keys)
