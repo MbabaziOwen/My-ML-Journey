@@ -1,10 +1,20 @@
-# a dictionary is a collection of key:value pairs ordered and changable . No duplictes
+#python guessing game
+import random
 
-capitals = {"USA": "Washington DC",
-            "India":"New Delhi",
-            "Uganda":"Kampala"}
+lowest_num = 1
+highest_num = 100
+answer = random.randint(lowest_num,highest_num)
 
-#print(dir(capitals))
-#print(help(capitals))  to get help and get all the functions you can use with the dictionary 
+guesses = 0
 
-print(capitals.get("Uganda"))
+is_running = True
+
+while is_running:
+    guess = input("enter a guess for the random number")
+    if guess == answer:
+        print(f"you guessed the number it is, {answer}, and you guessed it on your ,{guesses}th try  ")
+        break    
+    else:
+        print("try again ")
+        continue
+
