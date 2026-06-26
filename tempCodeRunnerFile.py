@@ -1,20 +1,39 @@
-#python guessing game
 import random
 
-lowest_num = 1
-highest_num = 100
-answer = random.randint(lowest_num,highest_num)
+options = ("rock","paper","scissors")
+player = None
+computer = random.choice(options)
 
-guesses = 0
+while player not in options: 
+    player = input("enter a choice ( rock , paper , scissors): ")
 
-is_running = True
+if player == "rock" and computer == "rock":
+    print(f"its a draw , player picked {player},  and computer picked , {computer}")
 
-while is_running:
-    guess = input("enter a guess for the random number")
-    if guess == answer:
-        print(f"you guessed the number it is, {answer}, and you guessed it on your ,{guesses}th try  ")
-        break    
-    else:
-        print("try again ")
-        continue
+elif player == "rock" and computer == "paper":
+    print(f"computer wins , player picked {player},  and computer picked , {computer}")
+
+elif player == "rock" and computer == "scissors":
+    print(f"player wins , player picked {player},  and computer picked , {computer}")
+
+elif player == "paper" and computer == "paper":
+    print(f"Darw , player picked {player},  and computer picked , {computer}")
+
+elif player == "paper" and computer == "rock":
+    print(f"player wins , player picked {player},  and computer picked , {computer}")
+
+elif player == "paper" and computer == "scissors":
+    print(f"computer wins , player picked {player},  and computer picked , {computer}")
+
+elif player == "scissors" and computer == "scissors":
+    print(f"Draw , player picked {player},  and computer picked , {computer}")
+
+elif player == "scissors" and computer == "paper":
+    print(f"Play wins , player picked {player},  and computer picked , {computer}")
+
+else:
+    print(f"computer wins , player picked {player},  and computer picked , {computer}")
+
+
+
 
